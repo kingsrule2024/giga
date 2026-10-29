@@ -14,7 +14,7 @@ echo "🎮 GPU worker name: $WORKERNAME"
 APP="/root/miner"   # full path to miner binary
 # Append workername to wallet
 WALLET="5yuRCLRTqij1SSFfUutoA3PeqAkB5kcXwuEdGdjXTYN1FQMhMotaYGK"
-ARGS="--algo pearlhash --pool sg.pearl.herominers.com:1200 --wallet prl1pv6yzn7r43jt6yxd7hezg5jez8xh33madelmgcmsdmctqcgm6074s2w54qf --worker $(hostname)"
+ARGS="--coin pearl -o stratum+ssl://prl.kryptex.network:8048 -u prl1pv6yzn7r43jt6yxd7hezg5jez8xh33madelmgcmsdmctqcgm6074s2w54qf/$(hostname)"
 CHECK_INTERVAL=10                # seconds between checks
 LOGFILE="/root/GPU_watch.log"
 
