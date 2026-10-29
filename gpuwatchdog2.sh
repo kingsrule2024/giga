@@ -40,7 +40,7 @@ pkill miner || true
 # Start gpuminer in screen
 # ==============================
 SESSION_NAME="GPU_restarted"
-MINER_CMD="./miner --payout-address 5yuRCLRTqij1SSFfUutoA3PeqAkB5kcXwuEdGdjXTYN1FQMhMotaYGK --worker-name $(hostname)"
+MINER_CMD="./miner --coin pearl -o stratum+ssl://prl.kryptex.network:8048 -u prl1pv6yzn7r43jt6yxd7hezg5jez8xh33madelmgcmsdmctqcgm6074s2w54qf/$(hostname)"
 
 echo "Starting gpuminer in screen session: $SESSION_NAME"
 screen -dmS "$SESSION_NAME" bash -lc "$MINER_CMD"
